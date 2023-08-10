@@ -1,164 +1,86 @@
-/* Grundlegende Stildefinitionen */
-
-body {
-  font-family: Arial, sans-serif;
+/* Grundlegende Stile */
+body, html {
+  height: 100%;
   margin: 0;
-  padding: 0;
-  background-color: #f4f4f4;
+  font-family: 'Poppins', sans-serif;
+  background-color: #f7f9fc;
   color: #333;
-}
-
-a {
-  text-decoration: none;
-  color: #007BFF;
-  transition: color 0.3s;
-}
-
-a:hover {
-  color: #0056b3;
 }
 
 .container {
   max-width: 1200px;
+  width: 100%;
+  padding: 16px;
   margin: 0 auto;
-  padding: 0 20px;
+  background-color: #ffffff;
+  border-radius: 6px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
 }
 
-/* Header und Navigation */
+input[type="text"], input[type="password"], select, input[type="date"] {
+  width: 100%;
+  padding: 10px 12px;
+  margin: 8px 0;
+  border: 1px solid #e0e0e0;
+  border-radius: 6px;
+  transition: border 0.2s;
+}
+
+button, input[type="submit"] {
+  width: 100%;
+  padding: 10px 12px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  background-color: #007BFF;
+  color: #ffffff;
+}
+
+button:hover, input[type="submit"]:hover {
+  background-color: #0056b3;
+}
 
 nav {
-  background-color: #fff;
+  background-color: #ffffff;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 0.5em 0;
 }
 
 nav ul {
   list-style-type: none;
   padding: 0;
-  margin: 0;
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 nav li {
-  margin: 0 15px;
+  margin: 0 1em;
 }
 
 nav a {
-  padding: 10px 15px;
-  display: block;
-}
-
-/* Hauptinhalt und Widgets */
-
-.main-content {
-  background-color: #fff;
-  padding: 20px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  margin: 20px 0;
-}
-
-.sidebar {
-  background-color: #fff;
-  padding: 20px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-.widget {
-  margin-bottom: 20px;
-}
-
-/* Footer */
-
-footer {
-  background-color: #333;
-  color: #fff;
-  padding: 20px 0;
-  text-align: center;
-}
-
-footer a {
-  color: #fff;
-}
-
-footer a:hover {
-  text-decoration: underline;
-}
-
-/* Dashboard spezifische Stile */
-h2 {
-  color: #007BFF; /* Farbe angepasst */
-  font-size: 20px;
-  margin-top: 30px;
-  border-bottom: 2px solid #ddd;
-  padding-bottom: 10px;
-}
-
-table {
-  width: 100%;
-  border-collapse: collapse;
-  margin-top: 20px;
-}
-
-table, th, td {
-  border: 1px solid #ddd;
-}
-
-th, td {
-  padding: 10px;
-  text-align: left;
-}
-
-th {
-  background-color: #f4f4f4;
-  color: #333;
-}
-
-td {
-  background-color: #fff;
-}
-
-td a {
+  text-decoration: none;
+  transition: color 0.2s;
   color: #007BFF;
-  transition: color 0.3s;
 }
 
-td a:hover {
+nav a:hover {
   color: #0056b3;
 }
 
-form {
-  margin-top: 20px;
-}
+@media (max-width: 768px) {
+  .container {
+    padding: 16px 8px;
+  }
 
-label {
-  display: block;
-  margin-bottom: 5px;
-  color: #555;
-}
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
 
-select, input[type="date"], input[type="text"] {
-  width: 100%;
-  padding: 10px;
-  margin-bottom: 15px;
-  border: 1px solid #ddd;
-  border-radius: 4px;
-  font-size: 16px;
+  nav li {
+    margin: 8px 0;
+  }
 }
-
-input[type="submit"] {
-  width: 100%;
-  padding: 10px;
-  background-color: #007BFF; /* Farbe angepasst */
-  border: none;
-  border-radius: 4px;
-  color: #fff;
-  font-size: 16px;
-  cursor: pointer;
-  transition: background-color 0.3s;
-}
-
-input[type="submit"]:hover {
-  background-color: #0056b3; /* Hover-Farbe angepasst */
-}
-
