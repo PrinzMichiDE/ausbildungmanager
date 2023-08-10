@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login/Register</title>
+    <link rel="stylesheet" href="/index-style.css"> <!-- Stellen Sie sicher, dass Sie auf Ihre CSS-Datei verweisen -->
+</head>
+<body>
+    <div class="fb-container">
+        <div class="fb-header">
+            <h1>MyApp</h1> <!-- Ersetzen Sie "MyApp" durch den Namen Ihrer Anwendung -->
+        </div>
+        <div class="fb-content">
+            <form action="/login" method="post" class="fb-form">
+                <input type="text" name="username" placeholder="MaxMustermann" required>
+                <input type="password" name="password" placeholder="Password" required>
+                <button type="submit">Log In</button>
+            </form>
+            <div class="fb-divider">
+                <hr>
+                <span>OR</span>
+            </div>
+            <a href="/register" class="fb-register-btn">Create New Account</a>
+        </div>
+    </div>
+
+
+  <script>
+    const usernameInput = document.getElementById('register-username'); // Angenommen, Ihr Eingabefeld hat die ID "username"
+    const feedbackDiv = document.createElement('div');
+    usernameInput.parentNode.insertBefore(feedbackDiv, usernameInput.nextSibling);
+
+    usernameInput.addEventListener('input', function() {
+    const username = usernameInput.value;
+    fetch(`/checkUsername/${username}`)
+        .then(response => response.json())
+        .then(data => {
+            if (data.exists) {
+                feedbackDiv.textContent = 'Username already exists!';
+                feedbackDiv.className = 'feedback-error';
+                usernameInput.className = 'username-taken';
+            } else {
+                feedbackDiv.textContent = 'Username is available';
+                feedbackDiv.className = 'feedback-success';
+                usernameInput.className = 'username-available';
+            }
+        })
+        .catch(error => {
+            console.error('Error checking username:', error);
+        });
+});
+
+</script>
+ 
+  
+</body>
+</html>

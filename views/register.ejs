@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link rel="stylesheet" href="/index-style.css"> <!-- Stellen Sie sicher, dass Sie auf Ihre CSS-Datei verweisen -->
+</head>
+<body>
+    <div class="fb-container">
+        <div class="fb-header">
+            <h1>MyApp</h1> <!-- Ersetzen Sie "MyApp" durch den Namen Ihrer Anwendung -->
+        </div>
+        <div class="fb-content">
+            <form action="/register" method="post" class="fb-form">
+                <input type="text" name="username" placeholder="MaxMustermann" required>
+                <input type="password" name="password" placeholder="Password" required>
+                <input type="password" name="confirmPassword" placeholder="Confirm Password" required>
+                <button type="submit">Sign Up</button>
+            </form>
+            <div class="fb-divider">
+                <hr>
+                <span>OR</span>
+            </div>
+            <a href="/login" class="fb-login-btn">Already have an account? Log In</a>
+        </div>
+    </div>
+</body>
+</html>

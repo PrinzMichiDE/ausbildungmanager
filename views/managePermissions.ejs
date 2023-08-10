@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Permissions Management</title>
+    <link rel="stylesheet" href="/style.css"> <!-- Stellen Sie sicher, dass Sie eine CSS-Datei haben, die so benannt ist oder ändern Sie den Pfad entsprechend. -->
+    <%- include('menu.ejs') %>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Permissions Management</h1>
+
+        <% roles.forEach(role => { %>
+            <div class="role-section">
+                <h2><%= role.name %></h2>
+                <h3>Permissions:</h3>
+                <ul>
+                    <% rolePermissions.forEach(rp => { %>
+                        <% if (rp.roleName === role.name) { %>
+                            <li><%= rp.permissionName %></li>
+                        <% } %>
+                    <% }); %>
+                </ul>
+            </div>
+        <% }); %>
+
+        <div class="actions">
+            <a href="/addPermission">Add New Permission</a>
+            <a href="/editPermission">Edit Permission</a>
+        </div>
+    </div>
+
+</body>
+</html>

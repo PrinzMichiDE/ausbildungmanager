@@ -1,0 +1,101 @@
+/* Grundlegende Stilrichtlinien */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4; /* Hintergrundfarbe angepasst */
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container, .fb-container {
+  max-width: 500px;
+  margin: 50px auto;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  color: #007BFF; /* Farbe angepasst */
+  font-size: 24px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+input[type="text"], input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+button, .fb-form button, .fb-login-btn {
+  width: 100%;
+  padding: 10px;
+  background-color: #007BFF; /* Farbe angepasst */
+  border: none;
+  border-radius: 4px;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover, .fb-form button:hover, .fb-login-btn:hover {
+  background-color: #0056b3; /* Hover-Farbe angepasst */
+}
+
+a, .fb-register-btn {
+  text-decoration: none;
+  color: #007BFF; /* Farbe angepasst */
+  transition: color 0.3s;
+}
+
+a:hover, .fb-register-btn:hover {
+  color: #0056b3; /* Hover-Farbe angepasst */
+}
+
+.footer {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.fb-header {
+  background-color: #007BFF; /* Farbe angepasst */
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
+.fb-content {
+  padding: 20px;
+}
+
+.fb-divider {
+  display: flex;
+  align-items: center;
+  margin: 20px 0;
+}
+
+.fb-divider hr {
+  flex: 1;
+  border: none;
+  height: 1px;
+  background-color: #ddd;
+}
+
+.fb-divider span {
+  margin: 0 10px;
+  color: #888;
+}
+
+.fb-register-btn {
+  background-color: #42b72a;
+}
+

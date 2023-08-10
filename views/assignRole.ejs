@@ -1,0 +1,22 @@
+<%- include('header.ejs', { title: 'Rolle zuweisen' }) %>
+<h1>Rolle zuweisen</h1>
+
+<form action="/assignRole" method="post">
+    <label for="user">Benutzer:</label>
+    <select id="user" name="userId">
+        <% users.forEach(user => { %>
+            <option value="<%= user.id %>"><%= user.username %></option>
+        <% }) %>
+    </select>
+    <br>
+
+    <label for="role">Rolle:</label>
+    <select id="role" name="roleId">
+        <% roles.forEach(role => { %>
+            <option value="<%= role.id %>"><%= role.name %></option>
+        <% }) %>
+    </select>
+    <br>
+
+    <input type="submit" value="Rolle zuweisen">
+</form>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Permission</title>
+    <%- include('menu.ejs') %>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <%- include('menu.ejs') %>
+
+    <h2>Edit Permission</h2>
+    <form action="/editPermission" method="post">
+        <div>
+            <label for="permissionId">Select Permission:</label>
+            <select id="permissionId" name="permissionId" required>
+                <% permissions.forEach(permission => { %>
+                    <option value="<%= permission.id %>"><%= permission.name %></option>
+                <% }); %>
+            </select>
+        </div>
+        <div>
+            <label for="newPermissionName">New Permission Name:</label>
+            <input type="text" id="newPermissionName" name="newPermissionName" required>
+        </div>
+        <div>
+            <button type="submit">Update Permission</button>
+        </div>
+    </form>
+</body>
+</html>
