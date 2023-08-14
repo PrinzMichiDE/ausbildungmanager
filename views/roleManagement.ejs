@@ -1,0 +1,16 @@
+<!-- views/roleManagement.ejs -->
+<h1>Rollenverwaltung</h1>
+<form action="/users/updateRole" method="post">
+    <select name="userId">
+        <% users.forEach(user => { %>
+            <option value="<%= user.id %>"><%= user.username %></option>
+        <% }); %>
+    </select>
+    
+    <select name="role">
+        <option value="Administrator">Administrator</option>
+        <option value="Gast">Gast</option>
+    </select>
+    
+    <input type="submit" value="Rolle aktualisieren">
+</form>
